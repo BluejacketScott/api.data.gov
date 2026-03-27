@@ -1,5 +1,4 @@
 import { createPinia } from "pinia";
-// eslint-disable-next-line import/extensions
 import { createApp } from "vue/dist/vue.esm-bundler.js";
 
 import App from "./App";

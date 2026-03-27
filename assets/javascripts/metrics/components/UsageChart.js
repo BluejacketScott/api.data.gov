@@ -6,35 +6,34 @@ import {
   onMounted,
   ref,
   watch,
-  // eslint-disable-next-line import/extensions
 } from "vue/dist/vue.esm-bundler.js";
 
 export default defineComponent({
-  template: `
-    <div>
-      <div class="grid-row">
-        <div class="desktop:grid-col">
-          <div ref="chartEl" class="chart" style="width: 100%; height: 400px;"></div>
-        </div>
-      </div>
-      <div class="grid-row">
-        <div class="desktop:grid-col text-center">
-          <p class="font-heading-xl">{{ Number(hitsTotal).toLocaleString() }}<br>Hits</p>
-        </div>
-        <div class="desktop:grid-col text-center">
-          <p class="font-heading-xl">{{ Number(activeApiKeysTotal).toLocaleString() }}<br>Unique API Keys</p>
-        </div>
-      </div>
-    </div>
-  `,
-
   props: {
-    title: String,
-    hits: Array,
-    hitsTotal: Number,
-    activeApiKeys: Array,
-    activeApiKeysTotal: Number,
-    dateFormatOptions: Object,
+    title: {
+      type: String,
+      required: true,
+    },
+    hits: {
+      type: Array,
+      required: true,
+    },
+    hitsTotal: {
+      type: Number,
+      required: true,
+    },
+    activeApiKeys: {
+      type: Array,
+      required: true,
+    },
+    activeApiKeysTotal: {
+      type: Number,
+      required: true,
+    },
+    dateFormatOptions: {
+      type: Object,
+      required: true,
+    },
   },
 
   setup(props) {
@@ -166,4 +165,21 @@ export default defineComponent({
       chartEl,
     };
   },
+  template: `
+    <div>
+      <div class="grid-row">
+        <div class="desktop:grid-col">
+          <div ref="chartEl" class="chart" style="width: 100%; height: 400px;"></div>
+        </div>
+      </div>
+      <div class="grid-row">
+        <div class="desktop:grid-col text-center">
+          <p class="font-heading-xl">{{ Number(hitsTotal).toLocaleString() }}<br>Hits</p>
+        </div>
+        <div class="desktop:grid-col text-center">
+          <p class="font-heading-xl">{{ Number(activeApiKeysTotal).toLocaleString() }}<br>Unique API Keys</p>
+        </div>
+      </div>
+    </div>
+  `,
 });

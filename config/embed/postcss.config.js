@@ -1,7 +1,7 @@
-const autoprefixer = require("autoprefixer");
-const postcssRelativeRem = require("postcss-relative-rem");
+import autoprefixer from "autoprefixer";
+import postcssRelativeRem from "postcss-relative-rem";
 
-module.exports = {
+export default {
   plugins: [
     autoprefixer,
     postcssRelativeRem({

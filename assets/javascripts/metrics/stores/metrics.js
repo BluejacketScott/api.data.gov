@@ -1,9 +1,7 @@
 import ky from "ky";
 import { defineStore } from "pinia";
 
-export default defineStore({
-  id: "metrics",
-
+export default defineStore("metrics", {
   state: () => ({
     organizations: [],
     organizationData: {},

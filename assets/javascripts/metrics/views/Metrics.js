@@ -3,7 +3,6 @@ import {
   defineComponent,
   onMounted,
   ref,
-  // eslint-disable-next-line import/extensions
 } from "vue/dist/vue.esm-bundler.js";
 
 import OrganizationsTable from "../components/OrganizationsTable";
@@ -14,6 +13,32 @@ export default defineComponent({
   components: {
     UsageChart,
     OrganizationsTable,
+  },
+
+  setup() {
+    const selectedOrganization = ref("all");
+
+    const store = useMetricsStore();
+
+    const organizationNames = computed(() => {
+      const names = [];
+      store.organizations.forEach((organization) => {
+        names.push(organization.name);
+      });
+      names.sort();
+
+      return names;
+    });
+
+    onMounted(() => {
+      store.fetchAnalytics();
+    });
+
+    return {
+      selectedOrganization,
+      organizationNames,
+      store,
+    };
   },
 
   template: `
@@ -61,30 +86,4 @@ export default defineComponent({
       </div>
     </div>
   `,
-
-  setup() {
-    const selectedOrganization = ref("all");
-
-    const store = useMetricsStore();
-
-    const organizationNames = computed(() => {
-      const names = [];
-      store.organizations.forEach((organization) => {
-        names.push(organization.name);
-      });
-      names.sort();
-
-      return names;
-    });
-
-    onMounted(() => {
-      store.fetchAnalytics();
-    });
-
-    return {
-      selectedOrganization,
-      organizationNames,
-      store,
-    };
-  },
 });

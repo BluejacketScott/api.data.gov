@@ -5,7 +5,6 @@ import {
   onMounted,
   ref,
   watch,
-  // eslint-disable-next-line import/extensions
 } from "vue/dist/vue.esm-bundler.js";
 
 import useMetricsStore from "../stores/metrics";
@@ -13,12 +12,6 @@ import useMetricsStore from "../stores/metrics";
 DataTable.defaults.column.orderSequence = ["asc", "desc"];
 
 export default defineComponent({
-  template: `
-    <div class="usa-table-container--scrollable">
-      <table ref="tableEl" class="usa-table usa-table--compact usa-table--striped organizations-table" style="width: 100%"></table>
-    </div>
-  `,
-
   setup() {
     const store = useMetricsStore();
     const organizations = computed(() => {
@@ -125,4 +118,9 @@ export default defineComponent({
       tableEl,
     };
   },
+  template: `
+    <div class="usa-table-container--scrollable">
+      <table ref="tableEl" class="usa-table usa-table--compact usa-table--striped organizations-table" style="width: 100%"></table>
+    </div>
+  `,
 });

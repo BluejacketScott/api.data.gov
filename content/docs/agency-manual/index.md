@@ -268,7 +268,6 @@ You can embed the API key signup form for api.data.gov on your own developer hub
        [![API key configuration for embedded form usage](images/embed_special_key_example.png)](images/embed_special_key_example.png)
    - Save the user.
 2. <a name="signup-embed-snippet"></a>Embed the following snippet of code on your own website. A couple of notes:
-
    - Be sure to replace the variables at the top: `registrationSource`, `apiKey`, and `contactUrl`.
    - If you're embedding this snippet on a GitHub Pages website (that uses Jekyll), you must wrap the entire snippet between Jekyll raw tags: `{% raw %} ... snippet goes here ... {% endraw %}`.
 
@@ -355,7 +354,6 @@ You can embed the API key signup form for api.data.gov on your own developer hub
      ```
 
 3. If your site uses a Content Security Policy, allow the following directives:
-
    - `script-src 'unsafe-inline' https://api.data.gov https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/`: The `'unsafe-inline'` directive is for embedding the `<script>` tag directly into your HTML page, while the `https://api.data.gov` directive is for loading the remote javascript that contains the signup form logic. The `recaptcha` values allow for the signup form's usage of [reCAPTCHA](https://developers.google.com/recaptcha/docs/faq#im-using-content-security-policy-csp-on-my-website.-how-can-i-configure-it-to-work-with-recaptcha).
    - `style-src https://api.data.gov`: Allows for loading the CSS file from api.data.gov to style the embedded widget.
    - `img-src data:`: Allows for inline `data:` icons the api.data.gov stylesheet uses.
@@ -363,7 +361,6 @@ You can embed the API key signup form for api.data.gov on your own developer hub
    - `frame-src https://www.google.com/recaptcha/ https://recaptcha.google.com/recaptcha/`: Allows for the signup form's usage of [reCAPTCHA](https://developers.google.com/recaptcha/docs/faq#im-using-content-security-policy-csp-on-my-website.-how-can-i-configure-it-to-work-with-recaptcha).
 
    Here is minimal example, although your CSP will likely include other entries already:
-
    - HTML meta tag:
 
      ```html
