@@ -12,11 +12,11 @@ RUN apt-get update && \
   apt-get -y --no-install-recommends install curl ca-certificates && \
   rm -rf /var/lib/apt/lists/* /var/lib/dpkg/*-old /var/cache/* /var/log/*
 
-ARG HUGO_VERSION=0.129.0
+ARG HUGO_VERSION=0.159.1
 RUN set -x && \
   curl -fsSL "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-${TARGETARCH}.tar.gz" | tar -xvz -C /usr/local/bin/ --wildcards "hugo"
 
-ARG DART_SASS_VERSION=1.77.8
+ARG DART_SASS_VERSION=1.98.0
 RUN set -x && \
   arch="$TARGETARCH" && \
   if [ "$TARGETARCH" = "amd64" ]; then \
@@ -28,7 +28,7 @@ RUN set -x && \
 #
 # Set store-dir for pnpm config due to PNPM_HOME not affecting things with some
 # of our development volume mounts: https://github.com/pnpm/pnpm/issues/7050
-ARG PNPM_VERSION=9.5.0
+ARG PNPM_VERSION=10.33.0
 RUN set -x && \
   npm install -g "@pnpm/exe@${PNPM_VERSION}" && \
   mkdir -p ~/.config/pnpm && \
@@ -47,7 +47,7 @@ RUN mkdir -p "${NODE_MODULES_DIR}/.pnpm" && \
   ln -s "$NODE_MODULES_DIR" /app/node_modules && \
   pnpm install
 
-COPY .eslintrc.js .prettierignore .prettierrc.yml config.yaml postcss.config.js /app/
+COPY .prettierignore .prettierrc.yml config.yaml eslint.config.js postcss.config.js /app/
 COPY assets /app/assets
 COPY config /app/config
 COPY content /app/content

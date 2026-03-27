@@ -42,7 +42,7 @@ jobs:
           TEST_IMAGE_TAG: ${{ steps.image-metadata.outputs.version }}
 
       - name: Prettier Check
-        run: docker compose run --rm web pnpm run prettier:check
+        run: docker compose run --rm web pnpm run format:check
         env:
           TEST_IMAGE_TAG: ${{ steps.image-metadata.outputs.version }}
 

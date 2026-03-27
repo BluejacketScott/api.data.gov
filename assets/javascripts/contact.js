@@ -9,7 +9,6 @@ const options = {
 };
 
 if (!options.apiKey) {
-  // eslint-disable-next-line no-alert
   alert("apiUmbrellaSignupOptions.apiKey must be set");
 }
 
@@ -54,7 +53,6 @@ formEl.addEventListener("submit", (event) => {
     })
     .then(({ response, data }) => {
       if (!response.ok) {
-        // eslint-disable-next-line no-throw-literal
         throw { responseData: data };
       }
 

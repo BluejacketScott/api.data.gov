@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/no-unresolved
 import * as params from "@params";
 import A11yDialog from "a11y-dialog";
 import escapeHtml from "escape-html";
@@ -69,12 +68,10 @@ const options = {
 };
 
 if (!options.apiKey) {
-  // eslint-disable-next-line no-alert
   alert("apiUmbrellaSignupOptions.apiKey must be set");
 }
 
 if (!options.registrationSource) {
-  // eslint-disable-next-line no-alert
   alert("apiUmbrellaSignupOptions.registrationSource must be set");
 }
 
@@ -357,7 +354,6 @@ function submitFetch() {
     })
     .then(({ response, data }) => {
       if (!response.ok) {
-        // eslint-disable-next-line no-throw-literal
         throw { responseData: data };
       }
 
@@ -593,7 +589,6 @@ formEl.addEventListener("submit", (event) => {
     } catch (e) {
       // eslint-disable-next-line no-console
       console.error("recaptcha error: ", e);
-      // eslint-disable-next-line no-alert
       alert(
         "Unexpected error occurred while validating CAPTCHA. Please try again or contact us for assistance",
       );
