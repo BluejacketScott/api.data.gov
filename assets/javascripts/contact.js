@@ -9,7 +9,7 @@ const options = {
 };
 
 if (!options.apiKey) {
-  alert("apiUmbrellaSignupOptions.apiKey must be set");
+  alert("apiUmbrellaContactOptions.apiKey must be set");
 }
 
 const modalEl = document.getElementById("alert_modal");
