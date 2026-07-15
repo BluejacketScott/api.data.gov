@@ -3,3 +3,4 @@
 /public
 /resources
 /pnpm-lock.yaml
+*.md
