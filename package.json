@@ -31,7 +31,7 @@
     "eslint-plugin-simple-import-sort": "^12.1.1",
     "eslint-plugin-vue": "^10.8.0",
     "globals": "^17.4.0",
-    "postcss": "^8.5.8",
+    "postcss": "^8.5.10",
     "postcss-cli": "^11.0.1",
     "postcss-prefixwrap": "^1.57.2",
     "postcss-relative-rem": "^1.0.0",
