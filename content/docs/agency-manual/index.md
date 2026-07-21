@@ -130,8 +130,6 @@ To set this up:
 
 ### IP Based Restrictions
 
-**_Note:_** _Our IPs might be changing in the future, so we're starting to steer people away from this approach (so you won't have to change IPs soon). However, if you prefer or require IP based restrictions, we can still share our IPs, and we'll be sure to give you ample notification if our IPs do change)._
-
 One of the common approaches is to only allow api.data.gov's server IP addresses to access your API backend. Here's a few general examples of how to restrict access by IP addresses to get you started:
 
 _Note:_ These examples use `1.2.3.4` and `1.2.3.5` as example IPs. [Contact us](https://api.data.gov/contact/#contact) directly for the real api.data.gov IP addresses in use (and if we ever add or change IP addresses, we'll be sure to give you ample notification).
