@@ -374,7 +374,7 @@ You can embed the API key signup form for api.data.gov on your own developer hub
      Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://api.data.gov https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/; style-src 'self' https://api.data.gov; img-src 'self' data:; connect-src 'self' https://api.data.gov; frame-src https://www.google.com/recaptcha/ https://recaptcha.google.com/recaptcha/;
      ```
 
-4. Navigate to the webpage where you placed the snippet. You should see a signup form and be able to signup for an API key completely on your own site. Run into any issues? [File an issue](https://github.com/18F/api.data.gov/issues).
+4. Navigate to the webpage where you placed the snippet. You should see a signup form and be able to signup for an API key completely on your own site. Run into any issues? [File an issue](https://github.com/GSA/api.data.gov/issues).
 
 ## Linking to your own contact/support address
 
@@ -439,7 +439,7 @@ Everything you can do within the api.data.gov admin interface is powered by an A
 
 ## How to post an alert box on api.data.gov and on the individual documentation pages to notify users of upcoming status changes.
 
-Edit the source of your documentation page (for example, [source/docs/nrel/index.md.erb](https://github.com/18F/api.data.gov/blob/main/source/docs/nrel/index.md.erb)). Add a snippet like this to the top of the page below the front-matter (below the last `---` line):
+Edit the source of your documentation page (for example, [source/docs/nrel/index.md.erb](https://github.com/GSA/api.data.gov/blob/main/source/docs/nrel/index.md.erb)). Add a snippet like this to the top of the page below the front-matter (below the last `---` line):
 
 ```html
 <div class="alert alert-danger">

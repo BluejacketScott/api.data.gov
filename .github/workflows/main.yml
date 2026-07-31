@@ -96,7 +96,7 @@ jobs:
           path: ./public
 
   deploy:
-    if: success() && github.repository_owner == '18F' && github.ref == 'refs/heads/main'
+    if: success() && github.repository_owner == 'GSA' && github.ref == 'refs/heads/main'
     needs: build
     runs-on: ubuntu-latest
     container:

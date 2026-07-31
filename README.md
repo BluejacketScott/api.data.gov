@@ -1,10 +1,10 @@
-[![CI](https://github.com/18F/api.data.gov/workflows/CI/badge.svg)](https://github.com/18F/api.data.gov/actions?workflow=CI) [![Code Climate](https://codeclimate.com/github/18F/api.data.gov/badges/gpa.svg)](https://codeclimate.com/github/18F/api.data.gov) [![Known Vulnerabilities](https://snyk.io/test/github/18F/api.data.gov/badge.svg?targetFile=Gemfile.lock)](https://snyk.io/test/github/18F/api.data.gov?targetFile=Gemfile.lock) [![Known Vulnerabilities](https://snyk.io/test/github/18F/api.data.gov/badge.svg?targetFile=requirements.txt)](https://snyk.io/test/github/18F/api.data.gov?targetFile=requirements.txt)
+[![CI](https://github.com/GSA/api.data.gov/workflows/CI/badge.svg)](https://github.com/GSA/api.data.gov/actions?workflow=CI) [![Code Climate](https://codeclimate.com/github/GSA/api.data.gov/badges/gpa.svg)](https://codeclimate.com/github/GSA/api.data.gov) [![Known Vulnerabilities](https://snyk.io/test/github/GSA/api.data.gov/badge.svg?targetFile=Gemfile.lock)](https://snyk.io/test/github/GSA/api.data.gov?targetFile=Gemfile.lock) [![Known Vulnerabilities](https://snyk.io/test/github/GSA/api.data.gov/badge.svg?targetFile=requirements.txt)](https://snyk.io/test/github/GSA/api.data.gov?targetFile=requirements.txt)
 
 # api.data.gov
 
 [https://api.data.gov](https://api.data.gov/) is a free API management service for federal agencies. Our aim is to make it easier for agencies to release and manage APIs.
 
-- [Program Notes for api.data.gov](https://github.com/18F/api.data.gov/wiki/Program-Notes)
+- [Program Notes for api.data.gov](https://github.com/GSA/api.data.gov/wiki/Program-Notes)
 - [GitHub Repository for API Umbrella](https://github.com/NREL/api-umbrella), the underlying technology of `api.data.gov`
 
 ## Notes
@@ -31,7 +31,7 @@ After you're happy with your changes, commit and submit a pull request.
 
 ## Deploy
 
-Changes pushed to `main` should automatically be published to production within a few minutes via the [CI GitHub Action](https://github.com/18F/api.data.gov/actions/workflows/main.yml).
+Changes pushed to `main` should automatically be published to production within a few minutes via the [CI GitHub Action](https://github.com/GSA/api.data.gov/actions/workflows/main.yml).
 
 ## Public domain
 
