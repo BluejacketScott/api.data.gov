@@ -4,7 +4,7 @@ on: [push, pull_request]
 
 env:
   COMPOSE_FILE: docker-compose.ci.yml
-  TEST_IMAGE_REPO: ghcr.io/18f/api.data.gov
+  TEST_IMAGE_REPO: ghcr.io/gsa/api.data.gov
 
 jobs:
   test:
