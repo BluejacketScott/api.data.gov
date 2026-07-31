@@ -53,7 +53,7 @@ leveraged-authorizations:
   - https://www.fedramp.gov/marketplace/compliant-systems/amazon-web-services-aws-eastwest-us-public-cloud/
 purpose: <link to README>
 components:
-  - https://github.com/18F/api.data.gov
+  - https://github.com/GSA/api.data.gov
   - https://github.com/nrel/api-umbrella
 
 # these will be the same unless your architecture is especially complex

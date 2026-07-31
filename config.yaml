@@ -7,7 +7,7 @@ disableKinds:
   - taxonomy
   - term
 params:
-  githubRepoUrl: https://github.com/18F/api.data.gov
+  githubRepoUrl: https://github.com/GSA/api.data.gov
   apiUmbrellaContactApiKey: DEMO_KEY
   apiUmbrellaSignupApiKey: DEMO_KEY
   csp:
